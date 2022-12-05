@@ -1,0 +1,40 @@
+\documentclass[11pt]{article}
+\usepackage{fullpage}
+
+\title{P vs NP Article Summary}
+\author{John Henry Mejia}
+\date{December 2, 2022}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+Although there is still a long way to go to solving the $\mathcal{P}$ vs $\mathcal{NP}$ problem, there has been major progress from its conception in 1971 to 2009 (today's paper). This progress pervades not only computer science but the sciences as a whole, being therefore important to learn about. 
+\section{The $\mathcal{P}$ vs $\mathcal{NP}$ problem}
+
+First, it is important to understand what the $\mathcal{P}$ vs $\mathcal{NP}$ problem is and its applications. The $\mathcal{P}$ vs $\mathcal{NP}$ problem is as follows: suppose you have a problem whose solution can be verified in polynomial time, that is, $n^2$, $n^3$, etc. time. This is considered an NP problem. If it can be \textit{solved} by a deterministic Turing computer in polynomial time, it is also known as a P problem. NP-complete is another subset of NP problems where if you can solve 1 problem you can solve the rest of them. Examples include the 3 color problem, the clique problem, and the Hamiltonian cycle problem, which, if properly adjusted, can resemble each other in polynomial time: if you are able to solve one of them in polynomial time, \textbf{you can solve the rest of them by taking one solution and transforming it to the rest.} 
+
+Unfortunately, we do not currently know how to solve any NP-complete problem in polynomial time, which is why most scientists today believe $\mathcal{P} \neq \mathcal{NP}$. However, proving such a belief has been not solvable so far.
+\section {If $\mathcal{P}$ = $\mathcal{NP}$}
+The reason why $\mathcal{P}$ vs $\mathcal{NP}$ is an important problem in mathematics today is because many of these problems have shown to be extremely important to the world, and if you could solve one, you could solve many many problems in the world. For example, finding optimal protein folding structures, language comprehension, AI, weather patterns, and computer vision would become trivial. In fact, it was named one of the 7 most important unsolved problems today. Not only that, but if you could show that $\mathcal{P}$ = $\mathcal{NP}$, you would be able to solve all 7 problems trivially: the author goes as far to say that the internet would become a footnote in history if $\mathcal{P}$ = $\mathcal{NP}$. However, most people today believe $\mathcal{P} \neq \mathcal{NP}$, as we will see.
+\section{Showing $\mathcal{P} \neq \mathcal{NP}$}
+There are many possible ways that have been tried to show that $\mathcal{P} \neq \mathcal{NP}$. First is diagonalization, a process that writes out a table that describes how a collection of objects behaves, and then  manipulates the “diagonal” of that table to get a new object that you can prove isn’t in the table. This has been used for many other computing problems, including Turing's Halting Problem, to show that they are contradictory and therefore cannot be true. However, this is generally considered not to work with the $\mathcal{P}$ vs $\mathcal{NP}$ problem because it requires simulation. 
+
+Second is Circuit complexity, which shows that if some NP-complete problem cannot be solved by a polynomial amount simple gates, then $\mathcal{P} \neq \mathcal{NP}$. However, this has not been shown to work so far and progress has not been made in the last 20 years. Third is Proof Complexity, where the idea is proving a tautology is much more difficult than proving otherwise (by giving an example). Cook and Reckhow observed that proving proof size lower bounds on stronger and stronger propositional proof systems can be viewed as a step towards separating P from NP. However, not much has been done since then because of how arbitrary the $\mathcal{P} $ vs $ \mathcal{NP}$ is.
+\section{Dealing with Hardness}
+Even if $\mathcal{P} \neq \mathcal{NP}$, as most experts believe, not all hope is lost: there are many ways to deal with NP-complete problems. First is brute force, which is useful because computers have been getting exponentially more powerful every year. Although we cannot yet get past exponential, which is difficult, we can still reduce the constants in complexity, letting us solve harder problems in less time. 
+
+Second is Parameterized Complexity, where even if one parameter is still super-exponential, other ones can be polynomial time, meaning we can have tractable problems if that one parameter is small.
+Third is approximation, which is important because many things today such as AI only require approximate answers. The goal is to be as fast as possible and as accurate as possible while still being approximate. 
+
+Finally, our last solution is heuristics and average-case complexity, where we try to make the most common cases work in polynomial time, even if edge cases can take exponential time. This is extremely important for practical computation today like cryptography.
+\section{Limits of Approximation}
+There are some approximations that are very difficult to get close to the solution of the problem without actually solving it. We know that we cannot achieve better approximations on some problems unless $\mathcal{P} = \mathcal{NP}$. These have been shown through "interactive proofs" where a proof need only work for randomized test cases. From this we know that we cannot approximate problems like the clique problem for a group of n more than $\frac{\sqrt{n}}{n}$ unless $\mathcal{P} = \mathcal{NP}$. This is an area of active research today. 
+\section {Using Hardness}
+Although it would be nice to have a world where $\mathcal{P} = \mathcal{NP}$, such as in section 3, most scientists today operate under the assumption that $\mathcal{P} \neq \mathcal{NP}$. This leads to many useful things, such as cryptography, where we assume it is much more difficult to solve the problem then to check an answer. Furthermore, we can generate much better pseudorandom number generators given the assumption of $\mathcal{P} \neq \mathcal{NP}$. This can also be used for interactive proofs as seen in section 6 and in cryptography. 
+\section {Using Quantum Computers}
+Many technologies are made under the assumption that there will never be an efficient algorithm to solve a given problem. However, quantum computing can change this for some problems. Nevertheless, most experts believe that for $\mathcal{NP}$-complete problems, quantum computing will not be useful for such purposes.  There are ways to speed it up, but only quadratically: quantum does not seem useful at turning exponential problems to quadratic problems. 
+\section {A New Hope}
+There are new ideas of how to prove the $\mathcal{P}$ vs $\mathcal{NP}$ problem, although they will take years and are nowhere near finished. Indeed, Mulmuney has created a theoretical proof called GCT involving integral points for high-dimension polygons; however, Mulmuney estimates it will take around 100 years for this proof to be solved, if it is even possible. 
+\end{document}
